@@ -59,7 +59,7 @@ class TODO:
 
         for i in self.todos:
             if(id == i['id']):
-                i['is_completed'] = ~i['is_completed']
+                i['is_completed'] = not(i['is_completed'])
     
     def completed_todos(self):
 
