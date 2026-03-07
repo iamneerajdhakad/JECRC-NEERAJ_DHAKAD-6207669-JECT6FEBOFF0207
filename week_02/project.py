@@ -29,6 +29,7 @@ class TODO:
             if(self.todos[i]['id']==id):
                 print(f'Removed TO-DO id {self.todos[i]['id']}')
                 self.todos.pop(i)
+                return
             i+=1
 
 
@@ -53,6 +54,7 @@ class TODO:
             if(self.todos[i]['id']==id):
                 print(f'Description Updated for {self.todos[i]['id']}')
                 self.todos[i]['desc']=new_desc
+                return
             i+=1
     
     def toggle_mark_as_completed(self, id):
@@ -60,6 +62,7 @@ class TODO:
         for i in self.todos:
             if(id == i['id']):
                 i['is_completed'] = not(i['is_completed'])
+                return
     
     def completed_todos(self):
 
